@@ -1,22 +1,52 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8"> 
-    <meta property="og:image" content="http://www.andyamo.fr/images/logo.png"> <!-- Image pour le partage sur Facebook -->
+    <meta property="og:image" content="./static/img/index_link.png"> <!-- Image pour le partage sur Facebook mais ne fonctionne pas -->
     <meta name="author" content="yruamau">
     <meta name="description" content="Description utilisée par les moteurs de recherches dans leurs résultats">
 
-    <title>&lt;title&gt; element</title> <!-- &lt;title&gt; -->
+    <title>Test</title> 
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- Icone de l'onglet du browser -->
-    <link rel="stylesheet" href="test_css.css">
+    <link rel="stylesheet" href="./static/css/test_css.css">
   </head>
-  <body>
-    <h1>&lt;h1&gt; element</h1>
-    <p>Amaury </p>
-    <img src="index_link.png">
 
-	<script src="tes_js.js"></script>
+  <body>
+
+    <h1>Test - CV &lt;h1&gt;</h1>
+    <h2>Stagiaire <em>Consultant</em> &lt;h2&gt;</h2> <!-- emphase pas italique -->
+    <ol>
+    	<li>Réalisation au sein du <i>cabinet</i> :</li>
+			<ul>
+		    	<li>Benchmark des services Cloud Public AWS, Azure, GCP & Alibaba, définition de use cases</li>
+		    	<li>Conception de supports de formation Cloud - FinOps</li>
+		    </ul>
+    	<li><b>Mission</b> pour le compte d'<strong>Adeo</strong></li> <!-- strong pas gras -->
+		    <ul>
+		    	<li>Élaboration de la gouvernance du programme Cloud entrepris</li>
+		    	<li>Scrum Mastering, accompagnement initial d’un stream en vue de son lancement</li>
+		    	<li>Sensibilisation des collaborateurs à l’Agile (formations 4h), embarquement collaborateurs</li>
+		    	<li>Création de supports de communication, rayonnement et ancrage du programme</li>
+		    </ul>
+    </ol>
+    
+    <p>J'en suis à  
+		<a href="https://developer.mozilla.org/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks" title="Cliquez pour vous accéder au tutoriel !">cette étape du tutoriel.</a>.
+	</p>
+  
+    <!-- Balise image -->
+    <a href="https://fr.wikipedia.org/wiki/Microsoft_Paint" title="Le logiciel providentiel !"><img src="./static/img/index_link.png"> </a>
+
+    <p>Vous voulez nous écrire une lettre ? Utilisez notre <a href="contacts.html#Adresse_mailing">adresse de contact</a>.</p>
+
+    <!-- <span style="font-size: 32px; margin: 21px 0;">Est-ce un titre principal?</span> -->
+
+    
+
+	<!-- js -->
+	<script src="./static/js/test_js.js"></script>
+
   </body>
 </html>
