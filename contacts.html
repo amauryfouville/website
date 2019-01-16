@@ -1,38 +1,91 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
-    <meta charset="utf-8"> 
-    <title>Test</title> 
+    <meta charset="utf-8">
 
-    <link rel="stylesheet" href="./static/css/test_css.css">
+    <title>Amaury Fouville</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
+         HTML5 fonctionne correctement avec les anciennes versions de
+         Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    <h1>Test - CV &lt;h1&gt;</h1>
-    	<h2 id="Adresse_mailing">Adresse de mailing</h2>
+    <!-- Voici notre en‑tête principale utilisée dans toutes les pages
+         de notre site web -->
+
+    <header>
+      <h1>Amaury Fouville</h1>
+      <h2>Double diplôme IMT Atlantique - <abbr title="Grenoble Ecole de Management">GEM</abbr></h2>
+      <h2>CDI à partir de <time datetime="2019-07">Juillet 2019</time></h2>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="./index.html">Expériences</a></li>
+        <li><a href="./formation.html">Formation</a></li>
+        <li><a href="./atouts.html">Atouts et compétences</a></li>
+        <li><a href="./contacts.html">Contacts</a></li>
+      </ul>
+
+       <!-- Un formulaire de recherche est une autre façon de naviguer de
+            façon non‑linéaire dans un site. -->
+
+       <form>
+         <input type="search" name="q" placeholder="Rechercher">
+         <input type="submit" value="Lancer !">
+       </form>
+     </nav>
+
+    <!-- Ici nous mettons le contenu de la page -->
+    <main>
+
+      <!-- Il contient un article -->
+      <article>
+        <header>
+        	<h2>Contacts</h2>
+        </header>
+
+        <hr>
+
+        <img src="./static/img/icon_tel.png"></a>
+        <h3>Numéro de téléphone</h3>
+
+        <hr>
+
+        <img src="./static/img/icon_mail.png"></a>
+        <h3><a href="mailto:amaury.fouville@gmail.com">Adresse mail</a>
+        </h3>
+
+        <hr>
+
+        <img src="./static/img/icon_linkedin.png"></a>
+        <h3><a href="https://www.linkedin.com/in/amauryfouville/" title="Cliquez ici pour accéder au profil LinkedIn"> Profil LinkedIn</a></h3>
+
+
+      </article>
+
+      <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
+           principal -->
+      <aside>
+        <h2></h2>
+
+        <p><a href="./pdfs/cv.pdf" download="Amaury Fouville - CV">Amaury Fouville- CV (pdf, 509 ko)</a></p>
+
+      </aside>
+
+    </main>
+
+    <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
+
+    <footer>
+      <p>Site web en construction</p>
+    </footer>
+
   </body>
 </html>
