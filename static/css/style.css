@@ -1,0 +1,83 @@
+html {
+	font-family: Helvetica, Arial, sans-serif;
+  	background-color: white;
+  	font-size: 15px;
+}
+
+body {
+	/*width: 300px;*/
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+	color: grey;
+}
+
+p {
+	font-size: 1rem;
+}
+
+ul,ol {
+  	background: grey;
+  	margin: 5px;
+ 	padding: 5px;
+ 	border: 1px solid black;
+}
+
+ol {
+	list-style-type: upper-roman;
+	list-style-position: inside;
+}
+
+li {
+	margin-left: 15px;
+	line-height: 1.5;	
+}
+
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: #4682B4;
+}
+
+a:visited {
+  color: #B0C4DE;
+}
+
+a:focus {
+  border-bottom: 1px solid;
+  background: #F5F5F5;
+}
+
+a:hover {
+  border-bottom: 1px solid;     
+  background: #F5F5F5;
+}
+
+a:active {
+  background: #265301;
+  color: #F5F5F5;
+}
+
+a[href*="http"] {
+  background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
