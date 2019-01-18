@@ -1,91 +1,118 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="fr">
+<head>
+  <title>Amaury Fouville - CV web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
 
-    <title>Amaury Fouville</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./static/css/style.css">
+  <!-- body -->
 
-    <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
-         HTML5 fonctionne correctement avec les anciennes versions de
-         Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
-  </head>
+<body>
 
-  <body>
-    <!-- Voici notre en‑tête principale utilisée dans toutes les pages
-         de notre site web -->
+  <!-- header -->
 
-    <header>
-      <h1>Amaury Fouville</h1>
-      <h2>Double diplôme IMT Atlantique - <abbr title="Grenoble Ecole de Management">GEM</abbr></h2>
-      <h2>CDI à partir de <time datetime="2019-07">Juillet 2019</time></h2>
-    </header>
+<div class="container">
+  <!-- <img class="img-responsive" src="./static/img/rando.jpg" al> -->
+  <!--<div class="row">
+    <div class="col-md-9"> -->
+        <br>
+        <h1>Amaury Fouville<br>
+        <small>Double diplôme IMT Atlantique - <abbr title="Grenoble Ecole de Management">GEM</abbr><br>
+        CDI à partir de <time datetime="2019-07">Juillet 2019</time></small>
+        </h1>      
+        <br>
+    <!--</div>
+      <div class="col-md-3">
+      <p><a href="./pdfs/cv.pdf" title="Amaury Fouville - CV (pdf, 509 ko)"><img src="./static/img/cv_pdf.png"></a>
+    </div> 
+  </div>  -->
+</div> 
 
-    <nav>
-      <ul>
-        <li><a href="./index.html">Expériences</a></li>
+<!-- Barre de navigation -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div> -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="./index.html">Expérience</a></li>
         <li><a href="./formation.html">Formation</a></li>
-        <li><a href="./atouts.html">Atouts et compétences</a></li>
-        <li><a href="./contacts.html">Contacts</a></li>
+        <li><a href="./atouts.html">Atouts et Compétences</a></li>
+        <li class="active"><a href="./contacts.html">Contact</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="./pdfs/cv.pdf" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-       <!-- Un formulaire de recherche est une autre façon de naviguer de
-            façon non‑linéaire dans un site. -->
+<!-- Contenu de la page -->
 
-       <form>
-         <input type="search" name="q" placeholder="Rechercher">
-         <input type="submit" value="Lancer !">
-       </form>
-     </nav>
+<div class="container">
 
-    <!-- Ici nous mettons le contenu de la page -->
-    <main>
+  <h2>Contact</h2>
+  <hr>
 
-      <!-- Il contient un article -->
-      <article>
-        <header>
-        	<h2>Contacts</h2>
-        </header>
+  <!-- Exp 1 -->
+  <div class="row">
+    <div class="col-md-1">
+      <br>
+      <span class="glyphicon glyphicon-home">
+    </div>
+    <div class="col-md-11">
+      <h4>        
+        9 rue des Carterons<br>
+        78270, Mousseaux-sur-Seine<br>
+        FRANCE
+      </h4>
+    </div>
+  </div>
 
-        <hr>
+  <!-- Exp 2 -->
+  <div class="row">
+    <div class="col-md-1">
+      <br>
+      <span class="glyphicon glyphicon-envelope">
+    </div>
+    <div class="col-md-11">
+      <br>
+      <h4>
+        <a href="mailto:amaury.fouville@gmail.com">amaury.fouville@gmail.com</a>
+      </h4>
+      <br>
+    </div>
+  </div>
 
-        <img src="./static/img/icon_tel.png"></a>
-        <h3>Numéro de téléphone</h3>
+  <div class="row">
+    <div class="col-md-1">
+      <br>
+      <span class="glyphicon glyphicon-user">
+    </div>
+    <div class="col-md-11">
+      <br>
+      <h4>
+        <a href="https://www.lindekin.com/in/amauryfouville">Profil LinkedIn</a>
+      </h4>
+      <br>
+    </div>
+  </div>
 
-        <hr>
-
-        <img src="./static/img/icon_mail.png"></a>
-        <h3><a href="mailto:amaury.fouville@gmail.com">Adresse mail</a>
-        </h3>
-
-        <hr>
-
-        <img src="./static/img/icon_linkedin.png"></a>
-        <h3><a href="https://www.linkedin.com/in/amauryfouville/" title="Cliquez ici pour accéder au profil LinkedIn"> Profil LinkedIn</a></h3>
+  
+</div>
 
 
-      </article>
-
-      <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
-           principal -->
-      <aside>
-        <h2></h2>
-
-        <p><a href="./pdfs/cv.pdf" download="Amaury Fouville - CV">Amaury Fouville- CV (pdf, 509 ko)</a></p>
-
-      </aside>
-
-    </main>
-
-    <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
-
-    <footer>
-      <p>Site web en construction</p>
-    </footer>
-
-  </body>
+</body>
 </html>
+
