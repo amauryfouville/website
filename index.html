@@ -1,121 +1,134 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="fr">
+<head>
+  <title>Amaury Fouville - CV web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+</head>
 
-    <title>Amaury Fouville - CV web</title>
-    
-    
-    <link rel="stylesheet" href="./static/css/style.css">
+  <!-- body -->
 
-    <!-- Bootstrap partie CSS -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
-         HTML5 fonctionne correctement avec les anciennes versions de
-         Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-    <![endif]-->
-  </head>
+<body>
 
-  <body>
-    <!-- E‑tête principale utilisée dans toutes les pages du site web -->
+  <!-- header -->
 
-    <header>
-      <h1>Amaury Fouville</h1>
-      <h2>Double diplôme IMT Atlantique - <abbr title="Grenoble Ecole de Management">GEM</abbr></h2>
-      <h2>CDI à partir de <time datetime="2019-07">Juillet 2019</time></h2>
-    </header>
+<div class="container">
+  <!-- <img class="img-responsive" src="./static/img/rando.jpg" al> -->
+  <!--<div class="row">
+    <div class="col-md-9"> -->
+        <br>
+        <h1>Amaury Fouville<br>
+        <small>Double diplôme IMT Atlantique - <abbr title="Grenoble Ecole de Management">GEM</abbr><br>
+        CDI à partir de <time datetime="2019-07">Juillet 2019</time></small>
+        </h1>      
+        <br>
+    <!--</div>
+      <div class="col-md-3">
+      <p><a href="./pdfs/cv.pdf" title="Amaury Fouville - CV (pdf, 509 ko)"><img src="./static/img/cv_pdf.png"></a>
+    </div> 
+  </div>  -->
+</div> 
 
-    <nav>
-      <ul>
-        <li><a href="./index.html">Expériences</a></li>
+<!-- Barre de navigation -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Portfolio</a>
+    </div> -->
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./index.html">Expérience</a></li>
         <li><a href="./formation.html">Formation</a></li>
-        <li><a href="./atouts.html">Atouts et compétences</a></li>
-        <li><a href="./contacts.html">Contacts</a></li>
+        <li><a href="./atouts.html">Atouts et Compétences</a></li>
+        <li><a href="./contacts.html">Contact</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="./pdfs/cv.pdf" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-       <!-- Un formulaire de recherche est une autre façon de naviguer de
-            façon non‑linéaire dans un site. -->
+<!-- Contenu de la page -->
 
-       <form>
-         <input type="search" name="q" placeholder="Rechercher">
-         <input type="submit" value="Lancer !">
-       </form>
-     </nav>
+<div class="container">
 
-    <!-- Ici nous mettons le contenu de la page -->
-    <main>
+  <h2>Expériences</h2>
+  <hr>
 
-      <!-- Il contient un article -->
-      <article>
-        <h2>Expériences</h2>
+  <!-- Exp 1 -->
+  <div class="row">
 
-        <h3>Consultant Stagiaire - TNP Consultants, Neuilly-sur-Seine</h3>
-        <p><time datetime="2018-03">Mars 2018</time> à <time datetime="2018-08">Août 2018</time></p>
+    <h3>Consultant Stagiaire - TNP Consultants <small>Neuilly-sur-Seine - <time datetime="2018-03">Mars 2018</time> à <time datetime="2018-08">Août 2018</time></small></h3>
 
-        <h4>Réalisations au sein du cabinet :</h4>
+    <div class="col-md-5">
+      <h4>Réalisations au sein du cabinet :</h4>
+      <ul>
+        <li>Benchmark des services Cloud Public AWS, Azure, GCP & Alibaba, définition de use cases</li>
+        <li>Conception de supports de formation Cloud - FinOps</li>
+      </ul>
+    </div>
 
-        <ul>
-          <li>Benchmark des services Cloud Public AWS, Azure, GCP & Alibaba, définition de use cases</li>
-          <li>Conception de supports de formation Cloud - FinOps</li>
-        </ul>
+    <div class="col-md-7">
+    <h4>Mission pour le compte d’<b>ADEO</b>, Transformation vers le Cloud :</h4>
+      <ul>
+        <li>Élaboration de la gouvernance du programme Cloud entrepris</li>
+        <li>Scrum Mastering, accompagnement initial d’un stream en vue de son lancement</li>
+        <li>Sensibilisation des collaborateurs à l’Agile (formations 4h), embarquement collaborateurs</li>
+        <li>Création de supports de communication, rayonnement et ancrage du programme</li>
+      </ul>
+    </div>
+  </div>
+  <hr>
 
-        <h4>Mission pour le compte d’<b>ADEO</b>, Transformation vers le Cloud :</h4>
+  <!-- Exp 2 -->
+  <div class="row">
+    
+    <h3>Assistant Chef de Projet MOA – CHANEL Horlogerie Joaillerie <small>Paris - <time datetime="2017-03">Mars 2017</time> à <time datetime="2017-09">Septembre 2017</time></small></h3>
+    <div class="col-md-5">
+      <h4>Projet de refonte des process et outils Supply Chain :</h4>
+      <ul>
+        <li>Recette des développements projet</li>
+        <li>Rédaction de la documentation</li>
+      </ul>
+    </div>
 
-        <ul>
-          <li>Élaboration de la gouvernance du programme Cloud entrepris</li>
-          <li>Scrum Mastering, accompagnement initial d’un stream en vue de son lancement</li>
-          <li>Sensibilisation des collaborateurs à l’Agile (formations 4h), embarquement collaborateurs</li>
-          <li>Création de supports de communication, rayonnement et ancrage du programme</li>
-        </ul>
+    <div class="col-md-7">
+      <h4>Administration de l’outil Business Intelligence :</h4>
+      <ul>
+        <li>Vérifications mensuelles des reportings de ventes et stocks mondiaux, intégrité des données</li>
+        <li>Administration de la base de données globale, centralisation et suivi des tâches et incidents</li>
+        <li>Formation des nouveaux collaborateurs et support utilisateurs au niveau groupe</li>
+      </ul>
+    </div>
+  
+  </div>
+  <hr>
 
-        <h3>Assistant Chef de Projet MOA – CHANEL Horlogerie Joaillerie, Paris</h3>
-        <p><time datetime="2017-03">Mars 2017</time> à <time datetime="2017-09">Septembre 2017</time></p>
+  <!-- Exp 3 -->
+  <div class="row">
+    <h3>S.O.G.E.V <small>Aix-en-Provence - <time datetime="2015-07">Juillet 2015</time> à <time datetime="2015-08">Août 2015</time></small></h3>
+    <h4>Stage ouvrier de six semaines en tant que manœuvre sur des chantiers</h4>
+  </div>
+  <hr>
 
-        <h4>Projet de refonte des process et outils Supply Chain :</h4>
+  <!-- Exp 4 -->
+  <div class="row">
+    <h3>Secrétaire - Association Humanitaire <small>IMT Atlantique - <time datetime="2015">2015</time></small><h3>
+  </div>
 
-        <ul>
-          <li>Recette des développements projet</li>
-          <li>Rédaction de la documentation</li>
-        </ul>
-
-        <h4>Administration de l’outil Business Intelligence :</h4>
-
-        <ul>
-          <li>Vérifications mensuelles des reportings de ventes et stocks mondiaux, intégrité des données</li>
-          <li>Administration de la base de données globale, centralisation et suivi des tâches et incidents</li>
-          <li>Formation des nouveaux collaborateurs et support utilisateurs au niveau groupe</li>
-        </ul>
-
-        <h3>S.O.G.E.V, Aix-en-Provence</h3>
-        <p><time datetime="2015-07">Juillet 2015</time> à <time datetime="2015-08">Août 2015</time></p>
-        <h4>Stage ouvrier de six semaines en tant que manœuvre sur des chantiers</h4>
-
-        <h3>Secrétaire - Association Humanitaire, IMT Atlantique</h3>
-        <p><time datetime="2015">2015</time></p>
+</div>
 
 
-      </article>
 
-      <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
-           principal -->
-      <aside>
-        <h2></h2>
-
-        <p><a href="./pdfs/cv.pdf" download="Amaury Fouville - CV">Amaury Fouville - CV (pdf, 509 ko)</a></p>
-
-      </aside>
-
-    </main>
-
-    <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
-
-    <footer>
-      <p>Site web en construction</p>
-    </footer>
-
-  </body>
+</body>
 </html>
