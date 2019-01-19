@@ -1,0 +1,14 @@
+.jumbotron {
+  color: white;
+  background-image: url("../img/rando.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  margin-bottom: 0px;
+}
+
+.jumbotron, h1 {
+	position: center;
+
+}
