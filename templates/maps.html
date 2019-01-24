@@ -13,10 +13,13 @@
   <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
   <style>
     #map {
-      height: 30%;
+      position: center;
+      height: 50%;
+      width: 50%;
     }
     html, body {
       height: 100%;
+      width: 100%;
       margin: 0;
       padding: 0;
     }
@@ -69,7 +72,7 @@
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
       center: {lat: 48.864, lng: 2.349},
-      zoom: 3
+      zoom: 2
     });
   }
 </script>
