@@ -4,11 +4,13 @@
   <title>Amaury Fouville - CV web</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../static/css/style2.css">
+  <!--  <link rel="stylesheet" href="../static/css/style2.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-  <script type="text/javascript" src="../static/js/js.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
 </head>
 
   <!-- body -->
@@ -37,12 +39,12 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="./index.html">Expériences</a></li>
-        <li><a href="./formation.html">Formation</a></li>
-        <li class="active"><a href="./atouts.html">Atouts et Compétences</a></li>
+        <li><a href="/">Expériences</a></li>
+        <li><a href="/formation">Formation</a></li>
+        <li class="active"><a href="/atouts">Atouts et Compétences</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./pdfs/cv.pdf" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+        <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
       </ul>
     </div>
   </div>
@@ -149,9 +151,9 @@
       <div class="col-md-4">
         <p>Navigation sur le site :</p>
         <ul>
-          <li><a href="./index.html">Expériences</a></li>
-          <li><a href="./formation.html">Formation</a></li>
-          <li><a href="./atouts.html">Atouts et Compétences</a></li>
+          <li><a href="/">Expériences</a></li>
+          <li><a href="/formation">Formation</a></li>
+          <li><a href="/atouts">Atouts et Compétences</a></li>
         </ul>
       </div>
       <div class="col-md-4">
