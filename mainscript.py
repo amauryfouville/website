@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 
 #Create instance of Flask App
-app = Flask(__name_)
+app = Flask(__name__)
 
 #Define Route and content of that page
 @app.route("/")
