@@ -19,7 +19,7 @@ def atouts():
     return render_template("atouts.html")
 
 @app.route("/map")
-def atouts():
+def map():
     return render_template("maps.html")
 
 #Running and Controlling the script
