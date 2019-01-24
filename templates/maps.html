@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Amaury Fouville - CV web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--  <link rel="stylesheet" href="../static/css/style2.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
+</head>
+
+  <!-- body -->
+
+<body>
+
+  <!-- header -->
+<div class="jumbotron jumbotron-fluid text-center">
+    <h1 class="display-4">Amaury Fouville</h1>
+    <h2>Double diplôme <abbr title="Institut Mines Télécom">IMT</abbr> Atlantique - <abbr title="Grenoble École de Management">GEM</abbr><br>
+        CDI à partir de <time datetime="2019-07">Juillet 2019</time>
+    </h2>
+  </div>
+</div>
+
+<!-- Barre de navigation -->
+<nav class="navbar navbar-inverse">
+
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Expériences</a></li>
+        <li><a href="/formation">Formation</a></li>
+        <li class="active"><a href="/atouts">Atouts et Compétences</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MAP -->
+
+
+<div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 48.864, lng: 2.349},
+          zoom: 3
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCvHw8Muj0fpjea23ZY76dxJNWuMeDdlV4 &callback=initMap"
+    async defer></script>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-4">
+        <p>Navigation sur le site :</p>
+        <ul>
+          <li><a href="/">Expériences</a></li>
+          <li><a href="/formation">Formation</a></li>
+          <li><a href="/atouts">Atouts et Compétences</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <p>Contacts :</p>
+        <p><a href="mailto:amaury.fouville@gmail.com"><i class="fa fa-envelope"></i></a></p>   
+        <p><a href="https://www.lindekin.com/in/amauryfouville"><i class="fa fa-linkedin"></i></a><br></p>
+        </ul>
+      </div>
+      <div class="col-md-2">
+      </div>
+     </div>
+  </div>
+  <div class="container-fluid text-center">
+    <p>amauryfouville.github.io © 2019 CV Web en construction</p>
+</footer>
+
+
+</body>
+</html>
+
