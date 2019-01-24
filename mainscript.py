@@ -18,6 +18,10 @@ def formation():
 def atouts():
     return render_template("atouts.html")
 
+@app.route("/map")
+def atouts():
+    return render_template("maps.html")
+
 #Running and Controlling the script
 if (__name__ =="__main__"):
 	app.run(port=80, host='0.0.0.0', debug=True)
