@@ -37,23 +37,7 @@ def atouts():
 
 @app.route("/map")
 def map():
-	if request.method == 'POST':
-	    name=request.args.get('name')
-	    lat=request.args.get('lat')
-	    long=request.args.get('long')
-	    type=request.args.get('type')
-	    try:
-	        location=location(
-	            name=name,
-	            lat=lat,
-	            long=long,
-	            type=type
-	        )
-	        db.session.add(location)
-	        db.session.commit()
-	        return "Locationk added. location id={}".format(location.id)
-	    except Exception as e:
-			return(str(e))
+	
     return render_template("maps.html")
 
 @app.route("/add")
