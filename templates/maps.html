@@ -65,6 +65,9 @@
 
 <!-- MAP -->
 
+<div class="row align-items-center justify-content-center">
+                <h3>Mes voyages</h3>
+</div>
 
 <div id="map"></div>
 <script>
@@ -81,35 +84,31 @@ async defer></script>
 
 <hr>
 
+<div class="row align-items-center justify-content-center">
+                <h3>Suggère-moi un endroit à visiter !</h3>
+</div>
 
-<div class="row">
-    <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Langue</th>
-        <th>Niveau</th>
-        <th>Résultat</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Français</td>
-        <td>Langue maternelle CERFL C1</td>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Anglais</td>
-        <td>Courant CERFL C1</td>
-        <td>TOEFL PBT : 640/677</td>
-      </tr>
-      <tr>
-        <td>Allemand</td>
-        <td>Intermédiaire CERFL B1</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
+<form method="POST">
+
+                <label for="name">Ville</label>
+                <div class="form-row">
+                    <input class="form-control" type="text" placeholder="location name" id="name" name="name">
+                </div>
+                <br>
+                <div class="form-row">
+                    <label for="lat">Latitude</label>
+                    <input class="form-control" type="number" step=0.000001 placeholder="latitude" id="lat" name="lat">
+                </div>
+                <br>
+                <div class="form-row ">
+                    <label for="long">Longitude</label>
+                    <input class="form-control" type="number" step=0.000001 placeholder="longitude" id="long" name="long">
+                </div>
+
+                <br>
+                <button type="submit " class="btn btn-primary " style="float:right ">Submit</button>
+            
+</form>
 
 
 
