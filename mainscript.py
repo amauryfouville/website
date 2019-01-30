@@ -5,7 +5,7 @@ from models import locations
 #Create instance of Flask App
 app = Flask(__name__)
 
-db = SQLAlchemy()
+"""db = SQLAlchemy()
 
 POSTGRES = {
     'user': 'vwbdbcvjiqxqsd',
@@ -17,7 +17,7 @@ POSTGRES = {
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 
-db.init_app(app)
+db.init_app(app)"""
 
 #Définitioin des routes et des contenus des pages
 
@@ -37,7 +37,23 @@ def atouts():
 
 @app.route("/map")
 def map():
-	
+	"""if request.method == 'POST':
+	    name=request.args.get('name')
+	    lat=request.args.get('lat')
+	    long=request.args.get('long')
+	    type=request.args.get('type')
+	    try:
+	        location=location(
+	            name=name,
+	            lat=lat,
+	            long=long,
+	            type=type
+	        )
+	        db.session.add(location)
+	        db.session.commit()
+	        return "Locationk added. location id={}".format(location.id)
+	    except Exception as e:
+			return(str(e))"""
     return render_template("maps.html")
 
 @app.route("/add")
