@@ -1,11 +1,13 @@
-from flask import Flask, render_template, request
+import os
+from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-from models import locations
+#from models import location
+
 
 #Create instance of Flask App
 app = Flask(__name__)
 
-"""db = SQLAlchemy()
+db = SQLAlchemy()
 
 POSTGRES = {
     'user': 'vwbdbcvjiqxqsd',
@@ -17,9 +19,37 @@ POSTGRES = {
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 
-db.init_app(app)"""
+db.init_app(app)
 
-#Définitioin des routes et des contenus des pages
+class location(db.Model):
+    __tablename__ = 'locations'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String())
+    lat = db.Column(db.Float())
+    long = db.Column(db.Float())
+    type = db.Column(db.String())
+    
+
+    def __init__(self, name, lat, long, type):
+        self.name = name
+        self.lat = lat
+        self.long = long
+        self.type = type
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+    
+    def serialize(self):
+        return {
+            'id': self.id, 
+            'name': self.name,
+            'lat': self.lat,
+            'long':self.long,
+            'type':self.type
+            }
+
+#Définition des routes et des contenus des pages
 
 #Accueil / Compétences, à séparer
 @app.route("/")
@@ -35,30 +65,25 @@ def formation():
 def atouts():
     return render_template("atouts.html")
 
-@app.route("/map")
+@app.route("/map",methods=['GET', 'POST'])
 def map():
-	"""if request.method == 'POST':
-	    name=request.args.get('name')
-	    lat=request.args.get('lat')
-	    long=request.args.get('long')
-	    type=request.args.get('type')
-	    try:
-	        location=location(
-	            name=name,
-	            lat=lat,
-	            long=long,
-	            type=type
-	        )
-	        db.session.add(location)
-	        db.session.commit()
-	        return "Locationk added. location id={}".format(location.id)
-	    except Exception as e:
-			return(str(e))"""
-    return render_template("maps.html")
+	if request.method == 'POST':
+		name=request.form.get('name')
+		lat=request.form.get('lat')
+		long=request.form.get('long')
+		try:
+			loc=location(
+				name=name,
+				lat=lat,
+				long=long,
+				type='suggestion'
+			)
+			db.session.add(loc)
+			db.session.commit()
+			return "Ville ajoutée. id={}".format(loc.id)
+		except Exception as e:
+			return(str(e))
+	return render_template("maps.html")
 
-@app.route("/add")
-
-
-#Running and Controlling the script
 if (__name__ =="__main__"):
 	app.run(port=80, host='0.0.0.0', debug=True)
