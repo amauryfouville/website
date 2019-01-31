@@ -29,7 +29,7 @@
   <!-- body -->
 
 <body>
-  <main class="wrapper">
+  
         <!-- header -->
     <div class="jumbotron jumbotron-fluid text-center">
       <h1 class="display-4">Amaury Fouville</h1>
@@ -64,12 +64,25 @@
 
     
 
-    <!--<div class="container">
+    <div class="container">
       <h2>Mes voyages</h2>
     </div>
- MAP -->
+ <!-- MAP -->
 
-    
+    <div id="map"></div>
+
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 48.864, lng: 2.349},
+          zoom: 2
+        });
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWzNEsVRAdcdZRrlplmws4LvOJliihPiQ&callback=initMap"
+    async defer></script>
 
     <div class="container">
                     <h2>Suggère-moi un endroit à visiter !</h2>
@@ -99,22 +112,7 @@
       </form>
     </div>
     <div class="push"></div>
-  </main>
-
-  <div id="map"></div>
-
-    <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 48.864, lng: 2.349},
-          zoom: 2
-        });
-      }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWzNEsVRAdcdZRrlplmws4LvOJliihPiQ&callback=initMap"
-    async defer></script>
+  
 
   <footer class="footer">
   <div class="container">
