@@ -7,7 +7,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!--  <link rel="stylesheet" href="../static/css/style2.css"> -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
@@ -17,87 +17,86 @@
 
 <body>
 
-  <!-- header -->
-<div class="jumbotron jumbotron-fluid text-center">
-    <h1 class="display-4">Amaury Fouville</h1>
-    <h2>Double diplôme <abbr title="Institut Mines Télécom">IMT</abbr> Atlantique - <abbr title="Grenoble École de Management">GEM</abbr><br>
-        CDI à partir de <time datetime="2019-07">Juillet 2019</time>
-    </h2>
-  </div>
-</div>
+  <main class="wrapper">
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1 class="display-4">Amaury Fouville</h1>
+        <h2>Double diplôme <abbr title="Institut Mines Télécom">IMT</abbr> Atlantique - <abbr title="Grenoble École de Management">GEM</abbr><br>
+            CDI à partir de <time datetime="2019-07">Juillet 2019</time>
+        </h2>
+      </div>
 
-<!-- Barre de navigation -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Expériences</a></li>
+            <li class="active"><a href="/formation">Formation</a></li>
+            <li><a href="/atouts">Atouts et Compétences</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu de la page -->
+
+    <div class="container">
+
+      <h2>Formation</h2>
+      <hr>
+
+      <!-- GEM -->
+      <div class="row">
+
+        <h3>École de commerce - <a href="https://www.grenoble-em.com/">Grenoble École de Management</a> <small>Grenoble - <time datetime="2018">2018</time> à <time datetime="2019">2018</time></small></h3>
+
+        
+          <h4>Enseignements suivis :</h4>
+          <p>&quot;Management du Changement&quot;, &quot;Management de la Diversité&quot;, &quot;Marketing&quot;, &quot;Géopolitique&quot;, &quot;Économie Écologique&quot; et &quot;Apprendre à Désobéir&quot;</p>
+      </div>
+      <hr>
+
+      <!-- TB -->
+      <div class="row">
+        
+        <h3>École d’ingénieur - <a href="https://www.imt-atlantique.fr/fr">IMT Atlantique</a> (cursus Télécom Bretagne) <small>Brest - <time datetime="2014">2014</time> à <time datetime="2018">2018</time></small></h3>
+        
+          <h4>Spécialisations : </h4>
+          <p>&quot;Business Intelligence&quot; et &quot;Management des Systèmes d'Information&quot;</p>
+          <h4>Enseignements suivis :</h4>
+          <p>&quot;Informatique&quot;, &quot;Sciences Economiques et Sociales&quot; et &quot;Réseaux&quot;</p>
+
+      
+      </div>
+      <hr>
+
+      <!-- TUD -->
+      <div class="row">
+        <h3>Semestre Académique - <a href="https://tu-dresden.de/">Technische Universität Dresden</a> <small>Allemagne - <time datetime="2016-02">Février 2016</time> à <time datetime="2016-08">Août 2016</time></small></h3>
+        
+      </div>
+      <hr>
+
+      <!-- CPGE -->
+      <div class="row">
+        <h3>Classes Préparatoires aux Grandes Écoles, Physique Chimie <small>Saint-Maur-des-Fossés - <time datetime="2012">2012</time> à <time datetime="2014">2014</time></small><h3>
+      </div>
+      <br>
     </div>
-
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="/">Expériences</a></li>
-        <li class="active"><a href="/formation">Formation</a></li>
-        <li><a href="/atouts">Atouts et Compétences</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Contenu de la page -->
-
-<div class="container">
-
-  <h2>Formation</h2>
-  <hr>
-
-  <!-- GEM -->
-  <div class="row">
-
-    <h3>École de commerce - <a href="https://www.grenoble-em.com/">Grenoble École de Management</a> <small>Grenoble - <time datetime="2018">2018</time> à <time datetime="2019">2018</time></small></h3>
-
-    
-      <h4>Enseignements suivis :</h4>
-      <p>&quot;Management du Changement&quot;, &quot;Management de la Diversité&quot;, &quot;Marketing&quot;, &quot;Géopolitique&quot;, &quot;Économie Écologique&quot; et &quot;Apprendre à Désobéir&quot;</p>
-  </div>
-  <hr>
-
-  <!-- TB -->
-  <div class="row">
-    
-    <h3>École d’ingénieur - <a href="https://www.imt-atlantique.fr/fr">IMT Atlantique</a> (cursus Télécom Bretagne) <small>Brest - <time datetime="2014">2014</time> à <time datetime="2018">2018</time></small></h3>
-    
-      <h4>Spécialisations : </h4>
-      <p>&quot;Business Intelligence&quot; et &quot;Management des Systèmes d'Information&quot;</p>
-      <h4>Enseignements suivis :</h4>
-      <p>&quot;Informatique&quot;, &quot;Sciences Economiques et Sociales&quot; et &quot;Réseaux&quot;</p>
-
-  
-  </div>
-  <hr>
-
-  <!-- TUD -->
-  <div class="row">
-    <h3>Semestre Académique - <a href="https://tu-dresden.de/">Technische Universität Dresden</a> <small>Allemagne - <time datetime="2016-02">Février 2016</time> à <time datetime="2016-08">Août 2016</time></small></h3>
-    
-  </div>
-  <hr>
-
-  <!-- CPGE -->
-  <div class="row">
-    <h3>Classes Préparatoires aux Grandes Écoles, Physique Chimie <small>Saint-Maur-des-Fossés - <time datetime="2012">2012</time> à <time datetime="2014">2014</time></small><h3>
-  </div>
-
-  <hr>
-
-</div>
+    <div class='push'></div>
+  </main>
 
 <footer class="footer">
   <div class="container">
@@ -122,6 +121,7 @@
       </div>
      </div>
   </div>
+  <hr>
   <div class="container-fluid text-center">
     <p>amauryfouville.github.io © 2019 CV Web en construction</p>
 </footer>
