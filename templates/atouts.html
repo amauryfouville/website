@@ -7,7 +7,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!--  <link rel="stylesheet" href="../static/css/style2.css"> -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
   <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
@@ -16,132 +16,133 @@
   <!-- body -->
 
 <body>
+  <main class="wrapper">
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1 class="display-4">Amaury Fouville</h1>
+        <h2>Double diplôme <abbr title="Institut Mines Télécom">IMT</abbr> Atlantique - <abbr title="Grenoble École de Management">GEM</abbr><br>
+            CDI à partir de <time datetime="2019-07">Juillet 2019</time>
+        </h2>
+      </div>
 
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-inverse">
+
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Expériences</a></li>
+            <li><a href="/formation">Formation</a></li>
+            <li class="active"><a href="/atouts">Atouts et Compétences</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenu de la page -->
+
+    <div class="container">
+
+      <h2>Atouts et Compétences</h2>
+      <hr>
+
+      <!-- Exp 1 -->
+      <div class="row">
+        <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Langue</th>
+            <th>Niveau</th>
+            <th>Résultat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Français</td>
+            <td>Langue maternelle CERFL C1</td>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Anglais</td>
+            <td>Courant CERFL C1</td>
+            <td>TOEFL PBT : 640/677</td>
+          </tr>
+          <tr>
+            <td>Allemand</td>
+            <td>Intermédiaire CERFL B1</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <h3>
+          Informatique <small>Python, HTML, CSS, SQL</small>
+        </h3>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <h3>
+          MBTI <small>Profil identifié</small>
+        </h3>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Association</th>
+            <th>Rôle</th>
+            <th>Année</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><abbr title="Bureau Des Élèves">BDE</abbr></td>
+            <td>Responsable des animations</td>
+            <th>2015</th>
+          </tr>
+          <tr>
+            <td>Association humanitaire</td>
+            <td>Secrétaire</td>
+            <td>2015</td>
+          </tr>
+          <tr>
+            <td>Club de kayak</td>
+            <td>Président</td>
+            <td>2015</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <h3>Sports <small>Kayak, cyclisme, course à pied, badminton</small>
+        </h3>
+      </div>
+    </div>
+    <div class='push'></div>
+  </main>
   <!-- header -->
-<div class="jumbotron jumbotron-fluid text-center">
-    <h1 class="display-4">Amaury Fouville</h1>
-    <h2>Double diplôme <abbr title="Institut Mines Télécom">IMT</abbr> Atlantique - <abbr title="Grenoble École de Management">GEM</abbr><br>
-        CDI à partir de <time datetime="2019-07">Juillet 2019</time>
-    </h2>
-  </div>
-</div>
 
-<!-- Barre de navigation -->
-<nav class="navbar navbar-inverse">
-
-  <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="/">Expériences</a></li>
-        <li><a href="/formation">Formation</a></li>
-        <li class="active"><a href="/atouts">Atouts et Compétences</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Contenu de la page -->
-
-<div class="container">
-
-  <h2>Atouts et Compétences</h2>
-  <hr>
-
-  <!-- Exp 1 -->
-  <div class="row">
-    <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Langue</th>
-        <th>Niveau</th>
-        <th>Résultat</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Français</td>
-        <td>Langue maternelle CERFL C1</td>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Anglais</td>
-        <td>Courant CERFL C1</td>
-        <td>TOEFL PBT : 640/677</td>
-      </tr>
-      <tr>
-        <td>Allemand</td>
-        <td>Intermédiaire CERFL B1</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <h3>
-      Informatique <small>Python, HTML, CSS, SQL</small>
-    </h3>
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <h3>
-      MBTI <small>Profil identifié</small>
-    </h3>
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Association</th>
-        <th>Rôle</th>
-        <th>Année</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><abbr title="Bureau Des Élèves">BDE</abbr></td>
-        <td>Responsable des animations</td>
-        <th>2015</th>
-      </tr>
-      <tr>
-        <td>Association humanitaire</td>
-        <td>Secrétaire</td>
-        <td>2015</td>
-      </tr>
-      <tr>
-        <td>Club de kayak</td>
-        <td>Président</td>
-        <td>2015</td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-
-  <hr>
-
-  <div class="row">
-    <h3>Sports <small>Kayak, cyclisme, course à pied, badminton</small>
-    </h3>
-  </div>
-
-</div>
 
 <footer class="footer">
   <div class="container">
@@ -166,6 +167,7 @@
       </div>
      </div>
   </div>
+  <hr>
   <div class="container-fluid text-center">
     <p>amauryfouville.github.io © 2019 CV Web en construction</p>
 </footer>
