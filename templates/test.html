@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Amaury Fouville - CV web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--  <link rel="stylesheet" href="../static/css/style2.css"> -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
+  <style>
+    #map {
+      margin: 0 auto 0 auto;
+      height: 80%;
+      width: 90%;
+    }
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+  <!-- body -->
+
+<body>
+  
+        <!-- header -->
+    <div class="jumbotron jumbotron-fluid text-center">
+      <h1 class="display-4">Amaury Fouville</h1>
+      <h2>Double diplôme <abbr title="Institut Mines Télécom">IMT</abbr> Atlantique - <abbr title="Grenoble École de Management">GEM</abbr><br>
+      CDI à partir de <time datetime="2019-07">Juillet 2019</time>
+      </h2>
+    </div>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-inverse">
+
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Expériences</a></li>
+            <li><a href="/formation">Formation</a></li>
+            <li><a href="/atouts">Atouts et Compétences</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ url_for('static', filename='pdfs/cv.pdf') }}" title="Amaury Fouville - CV (pdf, 509 ko)"><span class="glyphicon glyphicon-download-alt"></span> CV (pdf, 509 ko)</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+
+    <div class="container">
+      <h2>{{data}}</h2>
+      <h2>{{data[2]}}</h2>
+      <h2>{{data[2].name}}</h2>
+      <h2>{{data|tojson|length}}</h2>
+     
+
+    </div>
+
+
+ 
+
+
+    
+
+
+    <script>
+      
+
+    </script>
+
+    
+  
+
+  
+</body>
+</html>
+
