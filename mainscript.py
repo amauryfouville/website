@@ -1,13 +1,17 @@
 import os
+import ast
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
-#from models import location
+import json
+from models import location, db
 
+"""def create_app():
+    app = Flask(__name__)
+    db.init_app(app)
+    return app"""
 
 #Create instance of Flask App
 app = Flask(__name__)
-
-db = SQLAlchemy()
 
 POSTGRES = {
     'user': 'vwbdbcvjiqxqsd',
@@ -20,34 +24,30 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
 %(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 
 db.init_app(app)
+app.app_context().push()
 
-class location(db.Model):
-    __tablename__ = 'locations'
+"""
+allLocations=location.query.all()
 
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String())
-    lat = db.Column(db.Float())
-    long = db.Column(db.Float())
-    type = db.Column(db.String())
-    
+print("1")
+print(json.dumps([loc.serialize() for loc in allLocations]))
+print(type(json.dumps([loc.serialize() for loc in allLocations])))
 
-    def __init__(self, name, lat, long, type):
-        self.name = name
-        self.lat = lat
-        self.long = long
-        self.type = type
 
-    def __repr__(self):
-        return '<id {}>'.format(self.id)
-    
-    def serialize(self):
-        return {
-            'id': self.id, 
-            'name': self.name,
-            'lat': self.lat,
-            'long':self.long,
-            'type':self.type
-            }
+print("2")
+print(jsonify(local=[l.serialize() for l in allLocations]))
+
+
+print("3")
+variable = json.loads(json.dumps([loc.serialize() for loc in allLocations]))
+
+print(variable[0])
+print(variable[0].get("id"))
+
+print(json.loads(json.dumps([loc.serialize() for loc in allLocations])))
+print(type(json.loads(json.dumps([loc.serialize() for loc in allLocations]))))
+"""
+
 
 #Définition des routes et des contenus des pages
 
@@ -65,8 +65,18 @@ def formation():
 def atouts():
     return render_template("atouts.html")
 
+
+@app.route("/test")
+def test():
+	allLocations=location.query.all()
+	#return(json.dumps([loc.serialize() for loc in allLocations]))
+
+
+	return render_template("test.html", data=json.loads(json.dumps([loc.serialize() for loc in allLocations])))
+
 @app.route("/map",methods=['GET', 'POST'])
 def map():
+	allLocations=location.query.all()
 	if request.method == 'POST':
 		name=request.form.get('name')
 		lat=request.form.get('lat')
@@ -80,10 +90,11 @@ def map():
 			)
 			db.session.add(loc)
 			db.session.commit()
-			return "Ville ajoutée. id={}".format(loc.id)
+			allLocations=location.query.all()
+			return render_template("maps.html",data=json.loads(json.dumps([loc.serialize() for loc in allLocations])))
 		except Exception as e:
 			return(str(e))
-	return render_template("maps.html")
+	return render_template('maps.html', data=json.loads(json.dumps([loc.serialize() for loc in allLocations])))
 
 if (__name__ =="__main__"):
 	app.run(port=80, host='0.0.0.0', debug=True)
